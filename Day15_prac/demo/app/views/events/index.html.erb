@@ -1,0 +1,10 @@
+<h1>Event List</h1>
+
+
+<ul>
+	<%= @events.each do |event| %>
+	<li><%= event.name %></li>
+	<% end %>
+</ul>
+
+<%= link_to 'new event', :controller => :events, :action => :new %>

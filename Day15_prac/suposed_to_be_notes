@@ -1,0 +1,32 @@
+# suposed_to_be_notes
+
+Event.create(hash)
+=>Event.create(:name => "EJ")
+
+Event.new
+=>會讓資料消失
+
+e = Event.new
+=>e=(something)
+
+e.name="EJ"
+=>修改name欄位為EJ（和上面hash的一樣）
+
+相同的也可以：
+e = Event.new(:name => "EJ")
+
+最後再將資料存回資料庫：
+e.save
+
+Event.find_by_"something,column_name"("EJ")
+Event.find_by_name("EJ")
+只會有一筆資料回傳（find方法的特性）
+
+Event.where(:name => "EJ")
+會回傳所有
+
+Event.where(:name => "EJ").limit(1)
+回傳一筆
+
+Event.where("name = ? and description = ? ","EJ","nil")
+比較安全，會預先過濾掉不合法字串。
