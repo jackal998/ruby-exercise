@@ -3,6 +3,6 @@ class WelcomeController < ApplicationController
 		
 	end
 	def index
-		
+		@events =Event.all
 	end
 end

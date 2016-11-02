@@ -1,0 +1,10 @@
+<%= form_for @event, :url => {:controller => 'events',:action => 'update',:id => @event} do |f| %>
+	<%= f.label :name, "enter your name :" %>
+	<%= f.text_field :name %>
+
+	<%= f.label :description, "description :" %>
+	<%= f.text_area :description %>
+
+	<%= f.submit "Update" %>
+<% end %>
+<p><%= link_to 'Back to index', :controller => 'events' , :action => 'index' %></p>
