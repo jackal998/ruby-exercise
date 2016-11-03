@@ -20,6 +20,9 @@ gem 'coffee-rails', '~> 4.2'
 # From ihower's video
 gem 'kaminari'
 
+# From 511
+gem 'faker'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
